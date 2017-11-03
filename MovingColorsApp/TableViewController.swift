@@ -72,7 +72,6 @@ extension TableViewController: UITableViewDropDelegate {
                     let updates: () -> Void = {
                         let color = self.colors.remove(at: sourceIndexPath.row)
                         self.colors.insert(color, at: destinationIndexPath.row)
-                        self.colors.replace
                         self.tableView.deleteRows(at: [sourceIndexPath], with: .automatic)
                         self.tableView.insertRows(at: [destinationIndexPath], with: .automatic)
                     }
